@@ -1,0 +1,13 @@
+Backend
+    client -> backend : connect = rows,columns
+    backend -> client : res = [index,value]
+    client -> backend : change = index,value
+    backend -> client : acknowledge
+    backend -> clients : change = index,value 
+
+    client -> backend : clients_live
+    backend -> client : res = number of client
+    client -> backend : top_cell
+    backend -> client : res = index,value,votes
+
+    feature: I need to think about improvement
